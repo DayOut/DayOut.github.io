@@ -1,0 +1,13 @@
+{
+    "name": "arduino/weino",
+    "type": "project",
+    "authors": [
+        {
+            "name": "DayOut",
+            "email": "fearess7@gmail.com"
+        }
+    ],
+    "require": {
+        "hyperthese/php-serial": "^1.0"
+    }
+}
