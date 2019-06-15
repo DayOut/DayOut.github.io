@@ -1,0 +1,146 @@
+<nav class="navbar custom-navbar main-brand">
+  <a class="navbar-brand mr-auto" [routerLink]="['/']">
+    <svg class="docked-hidden" viewBox="0 0 69 12" width="69" height="12">
+      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M4.784,11.192 C7.664,11.192 8.912,9.672 8.912,7.896 C8.912,3.912 2.704,5.144 2.704,3.16 C2.704,2.36 3.408,1.832 4.512,1.832 C5.632,1.832 6.768,2.216 7.6,3.048 L8.672,1.656 C7.68,0.696 6.336,0.168 4.672,0.168 C2.336,0.168 0.784,1.528 0.784,3.288 C0.784,7.224 7.008,5.832 7.008,8.072 C7.008,8.776 6.4,9.528 4.864,9.528 C3.376,9.528 2.224,8.84 1.488,8.056 L0.448,9.496 C1.392,10.504 2.816,11.192 4.784,11.192 Z M14.896,11 L13.024,11 L13.024,1.976 L9.792,1.976 L9.792,0.328 L18.128,0.328 L18.128,1.976 L14.896,1.976 L14.896,11 Z M28.272,11 L26.144,11 L25.36,8.952 L20.464,8.952 L19.68,11 L17.552,11 L21.744,0.328 L24.08,0.328 L28.272,11 Z M24.832,7.304 L22.912,2.216 L20.992,7.304 L24.832,7.304 Z M34,11.192 C36.16,11.192 37.472,10.072 38.288,8.792 L36.688,7.976 C36.176,8.872 35.152,9.528 34,9.528 C31.888,9.528 30.32,7.912 30.32,5.672 C30.32,3.432 31.888,1.816 34,1.816 C35.152,1.816 36.176,2.488 36.688,3.368 L38.288,2.552 C37.488,1.272 36.16,0.152 34,0.152 C30.848,0.152 28.4,2.392 28.4,5.672 C28.4,8.952 30.848,11.192 34,11.192 Z M48.48,11 L43.824,5.368 L48.16,0.328 L45.84,0.328 L41.664,5.416 L41.664,0.328 L39.792,0.328 L39.792,11 L41.664,11 L41.664,7.592 L42.592,6.504 L46.176,11 L48.48,11 Z M57.04,11 L57.04,9.352 L51.6,9.352 L51.6,6.392 L56.928,6.392 L56.928,4.744 L51.6,4.744 L51.6,1.976 L57.04,1.976 L57.04,0.328 L49.728,0.328 L49.728,11 L57.04,11 Z M62.928,11 L58.96,11 L58.96,0.328 L62.928,0.328 C66.256,0.328 68.512,2.536 68.512,5.672 C68.512,8.808 66.256,11 62.928,11 Z M62.928,9.352 C65.248,9.352 66.592,7.688 66.592,5.672 C66.592,3.608 65.312,1.976 62.928,1.976 L60.832,1.976 L60.832,9.352 L62.928,9.352 Z"
+          fill="currentColor"></path>
+      </g>
+    </svg>
+
+    <svg class="docked-visible d-none d-lg-inline-block" viewBox="0 0 10 12">
+      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M5.008,11.192 C7.872,11.192 9.616,9.832 9.616,7.48 C9.616,3.512 3.68,4.376 3.68,3.368 C3.68,3.096 3.856,2.888 4.496,2.888 C5.504,2.888 6.704,3.24 7.632,3.944 L9.36,1.656 C8.144,0.664 6.576,0.168 4.832,0.168 C1.904,0.168 0.4,1.896 0.4,3.704 C0.4,7.912 6.352,6.872 6.352,7.896 C6.352,8.312 5.776,8.472 5.168,8.472 C3.728,8.472 2.528,7.864 1.728,7.096 L0.048,9.496 C1.184,10.52 2.736,11.192 5.008,11.192 Z"
+          fill="currentColor"></path>
+      </g>
+    </svg>
+  </a>
+
+  <a href="javascript:;" class="docked-hidden preferances-icon" container="body" placement="bottom" ngbTooltip="Preferances"
+    (click)="options.settings = !options.settings">
+    <i class="icon ion-ios-cog"></i>
+  </a>
+</nav>
+
+<!-- main navigation -->
+<nav class="menu" *ngIf="!options.settings">
+  <app-menu></app-menu>
+</nav>
+
+<nav class="menu" *ngIf="options.settings">
+  <ul class="navigation">
+    <li class="navigation-item">
+      <a class="navigation-link" [routerLink]="['/social']">
+        <i class="icon ion-ios-navigate mr-3"></i>
+        <span class="title mr-auto">Profile</span>
+      </a>
+    </li>
+    <li class="navigation-item">
+      <a class="navigation-link">
+        <i class="icon ion-ios-bell mr-3"></i>
+        <span class="title mr-auto">Notifications</span>
+      </a>
+    </li>
+    <li class="navigation-item">
+      <a class="navigation-link" [routerLink]="['/account/lockscreen']">
+        <i class="icon ion-ios-locked mr-3"></i>
+        <span class="title mr-auto">Lockscreen</span>
+      </a>
+    </li>
+    <li class="navigation-item">
+      <hr />
+    </li>
+    <li class="navigation-item">
+      <div class="navigation-link" (click)="options.docked = !options.docked; sendMessage()">
+        <label class="custom-control custom-checkbox mb-0 mr-3">
+          <input class="custom-control-input" type="checkbox" [(ngModel)]="options.docked">
+          <span class="custom-control-label"></span>
+        </label>
+        <span class="title mr-auto">Docked mode</span>
+      </div>
+    </li>
+    <li class="navigation-item">
+      <a class="navigation-link" (click)="toggleFullscreen.emit()">
+        <i class="icon ion-ios-eye mr-3"></i>
+        <span class="title mr-auto">Fullscreen</span>
+      </a>
+    </li>
+    <li class="navigation-item">
+      <div class="navigation-link" (click)="options.boxed = !options.boxed; sendMessage()">
+        <label class="custom-control custom-checkbox mb-0 mr-3">
+          <input class="custom-control-input" type="checkbox" [(ngModel)]="options.boxed">
+          <span class="custom-control-label"></span>
+        </label>
+        <span class="title mr-auto">Boxed</span>
+      </div>
+    </li>
+    <li class="navigation-item">
+      <hr />
+    </li>
+    <li class="navigation-item">
+      <div class="navigation-title">Themes</div>
+    </li>
+    <li class="navigation-item" [ngClass]="{'open': options.theme === 'eclipse'}">
+      <a class="navigation-link" (click)="setTheme('eclipse')">
+        <i class="icon ion-ios-moon mr-3"></i>
+        <span class="title mr-auto">Eclipse</span>
+      </a>
+    </li>
+    <li class="navigation-item" [ngClass]="{'open': options.theme === 'winter'}">
+      <a class="navigation-link" (click)="setTheme('winter')">
+        <i class="icon ion-ios-snowy mr-3"></i>
+        <span class="title mr-auto">Winter</span>
+      </a>
+    </li>
+    <li class="navigation-item" [ngClass]="{'open': options.theme === 'spring'}">
+      <a class="navigation-link" (click)="setTheme('spring')">
+        <i class="icon ion-ios-flower mr-3"></i>
+        <span class="title mr-auto">Spring</span>
+      </a>
+    </li>
+    <li class="navigation-item" [ngClass]="{'open': options.theme === 'autumn'}">
+      <a class="navigation-link" (click)="setTheme('autumn')">
+        <i class="icon ion-ios-medical mr-3"></i>
+        <span class="title mr-auto">Autumn</span>
+      </a>
+    </li>
+    <li class="navigation-item" [ngClass]="{'open': options.theme === 'summer'}">
+      <a class="navigation-link" (click)="setTheme('summer')">
+        <i class="icon ion-ios-flame mr-3"></i>
+        <span class="title mr-auto">Summer</span>
+      </a>
+    </li>
+    <li class="navigation-item docked-hidden">
+      <hr />
+    </li>
+    <li class="navigation-item docked-hidden">
+      <div class="px-4 d-flex align-items-center">
+        <select class="custom-select" [(ngModel)]="options.lang" #langSelect="ngModel" (ngModelChange)="translate.use(options.lang)"
+          placeholder="Select language" style="min-width: 100%;">
+          <option *ngFor="let lang of translate.getLangs()" [value]="lang">{{ lang }}</option>
+        </select>
+      </div>
+    </li>
+  </ul>
+</nav>
+<!-- /main navigation -->
+
+<nav class="navbar custom-navbar sidebar-footer">
+  <ul class="navbar-nav row no-gutters w-100">
+    <li class="nav-item col-4 ml-0 docked-hidden">
+      <a [routerLink]="['/email']" class="nav-link m-auto" container="body" ngbTooltip="Inbox">
+        <i class="icon ion-ios-filing"></i>
+      </a>
+    </li>
+    <li class="nav-item col-4 ml-0 docked-hidden">
+      <a [routerLink]="['/social']" class="nav-link m-auto" container="body" ngbTooltip="Profile">
+        <i class="icon ion-ios-person"></i>
+      </a>
+    </li>
+    <li class="nav-item col-4 ml-0">
+      <a [routerLink]="['/account/signin']" class="nav-link m-auto" container="body" ngbTooltip="Sign out">
+        <i class="icon ion-log-out"></i>
+      </a>
+    </li>
+
+  </ul>
+</nav>

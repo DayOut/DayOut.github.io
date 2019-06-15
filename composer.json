@@ -1,13 +1,6 @@
 {
-    "name": "arduino/weino",
-    "type": "project",
-    "authors": [
-        {
-            "name": "DayOut",
-            "email": "fearess7@gmail.com"
-        }
-    ],
+    "name": "feare/day-out.github.io",
     "require": {
-        "hyperthese/php-serial": "^1.0"
+        "twbs/bootstrap": "^4.3"
     }
 }

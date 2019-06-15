@@ -1,0 +1,153 @@
+<nav class="navbar custom-navbar bg-faded main-header px-3">
+
+  <a href="javascript:;" class="nav-link pl-0 d-lg-none" (click)="toggleSidenav.emit()">
+    <i class="icon ion-android-menu"></i>
+  </a>
+
+  <span class="navbar-heading mr-3">{{heading}}</span>
+
+  <span class="nav-divider mx-3 d-none d-sm-block"></span>
+
+  <ul class="navbar-nav mx-3">
+    <li class="nav-item" ngbDropdown placement="bottom-left">
+      <a href="javascript:;" class="nav-link" ngbDropdownToggle container="body" placement="bottom" ngbTooltip="Notifications">
+        <i class="icon ion-ios-world"></i>
+        <span class="badge badge-danger">4</span>
+      </a>
+      <div ngbDropdownMenu class="dropdown-menu dropdown-menu-right notifications">
+        <div class="notifications-wrapper">
+          <a href="javascript:;" class="dropdown-item">
+            <span class="badge badge-warning">NEW</span>
+            &nbsp;Sean launched a new application
+            <span class="time">2 seconds ago</span>
+          </a>
+          <a href="javascript:;" class="dropdown-item">
+            Removed calendar from app list
+            <span class="time">4 hours ago</span>
+          </a>
+          <a href="javascript:;" class="dropdown-item">
+            Jack Hunt has joined mailing list
+            <span class="time">9 days ago</span>
+          </a>
+          <a href="javascript:;" class="dropdown-item">
+            <span class="text-muted">Conan Johns created a new list</span>
+            <span class="time">9 days ago</span>
+          </a>
+        </div>
+        <div class="notification-footer">
+          <a href="javascript:;" class="dropdown-item">See all notifications</a>
+        </div>
+      </div>
+    </li>
+    <li class="nav-item" ngbDropdown placement="bottom-left">
+      <a href="javascript:;" class="nav-link" ngbDropdownToggle container="body" placement="bottom" ngbTooltip="Quick launch">
+        <i class="icon ion-ios-keypad"></i>
+      </a>
+      <div ngbDropdownMenu class="dropdown-menu dropdown-menu-right quick-launch">
+        <div class="row">
+          <div class="col-4 text-center py-3">
+            <a href="javascript:;">
+              <span class="d-block">
+                <i class="h1 text-primary icon ion-ios-email"></i>
+              </span>
+              <small class="text-muted">Emails</small>
+            </a>
+          </div>
+          <div class="col-4 text-center py-3">
+            <a href="javascript:;">
+              <span class="d-block">
+                <i class="h1 text-success icon ion-ios-person"></i>
+              </span>
+              <small class="text-muted">Social</small>
+            </a>
+          </div>
+          <div class="col-4 text-center py-3">
+            <a href="javascript:;">
+              <span class="d-block">
+                <i class="h1 text-info icon ion-ios-film"></i>
+              </span>
+              <small class="text-muted">Multimedia</small>
+            </a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4 text-center py-3">
+            <a href="javascript:;">
+              <span class="d-block">
+                <i class="h1 text-danger icon ion-ios-calendar"></i>
+              </span>
+              <small class="text-muted">Calendar</small>
+            </a>
+          </div>
+          <div class="col-4 text-center py-3">
+            <a href="javascript:;">
+              <span class="d-block">
+                <i class="h1 text-warning icon ion-ios-navigate"></i>
+              </span>
+              <small class="text-muted">Map</small>
+            </a>
+          </div>
+          <div class="col-4 text-center py-3">
+            <a href="javascript:;">
+              <span class="d-block">
+                <i class="h1 text-muted icon ion-ios-paper"></i>
+              </span>
+              <small class="text-muted">Taskboard</small>
+            </a>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a href="javascript:;" [routerLink]="['/docs']" class="nav-link" container="body" placement="bottom" ngbTooltip="Help">
+        <i class="icon ion-ios-help"></i>
+      </a>
+    </li>
+  </ul>
+
+  <span class="nav-divider mx-3 d-none d-sm-block"></span>
+
+  <form class="form-search form-inline ml-3 d-none d-sm-block">
+    <div class="d-flex align-items-center">
+      <i class="icon ion-ios-search mr-2"></i>
+      <input class="form-control border-0 no-bg fw-300" type="text" placeholder="Search for widgets...">
+    </div>
+  </form>
+
+  <span class="mr-auto"></span>
+
+  <ul class="navbar-nav">
+    <li class="nav-item" ngbDropdown placement="bottom-right">
+      <a href="javascript:;" class="nav-link" ngbDropdownToggle>
+        <span class="widget-icon rounded-circle bg-secondary text-white d-none d-md-inline-block">JG</span>
+        <span class="ml-2">Jack Gold</span>
+      </a>
+      <div ngbDropdownMenu class="dropdown-menu dropdown-menu-right">
+        <a class="dropdown-item" href="javascript:;">
+          <span>Settings</span>
+        </a>
+        <a class="dropdown-item" href="javascript:;">
+          <span>Profile</span>
+        </a>
+        <a class="dropdown-item" href="javascript:;">
+          <span>Notifications</span>
+        </a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="javascript:;">
+          <span>Help</span>
+        </a>
+        <a class="dropdown-item" href="javascript:;">
+          <span>Signout</span>
+        </a>
+      </div>
+    </li>
+  </ul>
+
+  <ul class="navbar-nav ml-3">
+    <li class="nav-item">
+      <a href="" class="nav-link" [routerLink]="['/pages/pricing']">
+        <button class="btn btn-secondary btn-sm px-3">Upgrade</button>
+      </a>
+    </li>
+  </ul>
+</nav>
